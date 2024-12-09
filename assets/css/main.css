@@ -19,7 +19,7 @@
 	--main-icon-background: #0091ad;
 
 	--main-background1: #222222;
-	--main-background2: #444444;
+	--main-background2: #302f2f;
 	--main-featured-projects: #0091ad;
 	--main-title: #0091ad;
 	--main-text1: #ffffff;
@@ -39,7 +39,7 @@
     animation-direction: alternate-reverse;
     animation-play-state: running;
     animation-timing-function: ease-in-out;
-    animation-duration: 60s;
+    animation-duration: 40s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
 }
@@ -59,6 +59,111 @@
 	100%{
         background-image:  url(../../images/banners/1.jpg);
     }
+    
+}
+
+.steelseraphbannerimage{
+    display: block;
+    height: 20em;
+    border-radius: 0;
+    background-size: cover;
+    transition: 2s;
+
+    animation-name: steelseraphbanner;
+    animation-direction: alternate-reverse;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes steelseraphbanner{
+    0%{
+        background-image:  url(../../images/banners/steelseraph/1.png);
+    }
+	25%{
+		background-image:  url(../../images/banners/steelseraph/1.png);
+	}
+	50%{
+		background-image:  url(../../images/banners/steelseraph/1.png);
+	}
+	75%{
+		background-image:  url(../../images/banners/steelseraph/2.jpg);
+	}
+	100%{
+		background-image:  url(../../images/banners/steelseraph/2.jpg);
+	}
+    
+}
+
+.planetgeneratorbannerimage{
+    display: block;
+    height: 20em;
+    border-radius: 0;
+    background-size: cover;
+    transition: 2s;
+
+    animation-name: planetgeneratorbanner;
+    animation-direction: alternate-reverse;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes planetgeneratorbanner{
+    0%{
+        background-image:  url(../../images/banners/planetgenerator/1.jpg);
+    }
+	25%{
+		background-image:  url(../../images/banners/planetgenerator/1.jpg);
+	}
+	50%{
+		background-image:  url(../../images/banners/planetgenerator/1.jpg);
+	}
+	75%{
+		background-image:  url(../../images/banners/planetgenerator/1.jpg);
+	}
+	100%{
+		background-image:  url(../../images/banners/planetgenerator/1.jpg);
+	}
+    
+}
+
+.glovesoffbannerimage{
+    display: block;
+    height: 20em;
+    border-radius: 0;
+    background-size: cover;
+    transition: 2s;
+
+    animation-name: glovesoffbanner;
+    animation-direction: alternate-reverse;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes glovesoffbanner{
+    0%{
+        background-image:  url(../../images/banners/glovesoff/1.jpg);
+    }
+	25%{
+		background-image:  url(../../images/banners/glovesoff/1.jpg);
+	}
+	50%{
+		background-image:  url(../../images/banners/glovesoff/1.jpg);
+	}
+	75%{
+		background-image:  url(../../images/banners/glovesoff/1.jpg);
+	}
+	100%{
+		background-image:  url(../../images/banners/glovesoff/1.jpg);
+	}
     
 }
 
@@ -189,7 +294,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: var(--main-text1);
+		color: var(--main-title);
 		font-weight: 700;
 		line-height: 1em;
 		margin: 0 0 0.5625em 0;
@@ -213,6 +318,7 @@ input, select, textarea {
 
 	h4 {
 		font-size: 1.25em;
+		color: var(--main-text1);
 		line-height: 1.5em;
 	}
 
@@ -2826,7 +2932,7 @@ input, select, textarea {
 			}
 
 				#header > footer .icons li a {
-					color: var(--main-background1);
+					color: var(--header-text2);
 				}
 
 		#header > nav {
