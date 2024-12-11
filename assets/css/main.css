@@ -2390,8 +2390,8 @@ input, select, textarea {
 
 		.image.article{
 			display: block;
-			height: 20em;
-			width: 44em;
+			height: 100%;
+			width: 100%;
 			border-radius: 5px;
 		}
 		.image.main {
@@ -3102,7 +3102,7 @@ input, select, textarea {
 		/* Main */
 
 			#main > section > .container {
-				padding: 4em 0 2em 0;
+				padding: 4em 4em 2em 0;
 			}
 
 	}
@@ -3416,7 +3416,7 @@ input, select, textarea {
 		/* Main */
 
 			#main > section > .container {
-				padding: 2em 0 0 0;
+				padding: 2em 4em 0 0;
 			}
 
 		/* Footer */
