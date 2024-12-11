@@ -25,7 +25,10 @@
 				</header>
 				<nav id="nav">
 					<ul>
-						<li><a href="index.html#one">Home</a></li>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="steelseraph.html" class="active">Steel Seraph</a></li>
+						<li><a href="planetgenerator.html">Planet Generator</a></li>
+						<li><a href="glovesoff.html">Gloves Off</a></li>
 					</ul>
 				</nav>
 				<footer>
@@ -52,11 +55,58 @@
 										<p>Lead Programmer | Character Controller | Unity<br> Check out the <a href="https://github.com/DerogeNaN/CyberSheriff">Repository</a></p>
 									</header>
 									<p> A cybernetically enhanced cowboy wakes from cryosleep atop a Corporate MEGA-tower in the distant future. Dazed but deadly, 
-										he is determined to survive endless waves of deadly enemies.</p>
+										he is determined to survive endless waves of deadly enemies.
+									</p>
 									<p>I had a great time working on this project but definitely had my fair share of troubles along the way! One of the aspects of this project
 										I'm most proud of would be the physics character controller, as I strived to make a fully custom controller detached from Unity's rigid body system.
-										You can read about that <a href="charactercontroller.html">here.</a></p>
-									<p>I was primarily in charge of task delegation (On the code side) and implementing the other programmers work.</p>	
+									</p>
+									<p>Besides the movement I was primarily in charge of task delegation (On the code side) and implementing the work of other disciplines. The game involves an 
+										AI system driven by Unity's Nav Mesh System, a weapon management system, a wave management system for handling the spawning and pathing of AI, and a movement 
+										system which managed player inputs and character movement.
+									</p>	
+									<p>My journey developing this character controller was an interesting one due to the fact I was rather inexperienced with vector maths and physics as a whole. 
+										Thanks to help from my professor Finn Morgan and a peer <a href="https://tomtomobrien.com">Thomas O'Brien</a> I was able to complete my character controller free
+										of Unity's physics library (Mostly).
+									</p>
+									<img src="images/steelseraph/Movement_Demo.gif" class="image article">
+									<p><i>Proof of concept of the movement system</i></p>
+									<p>At this point in development my focus was getting a playable controller in the 
+										hands of the Designers so they could map out levels and balance variables. The player could jump, double jump, slide and wall run and the collisions were 
+										handled by Unity's rigid body system.
+									</p>
+									<video autoplay muted loop class="image article">
+										<source src="videos/steelseraph/movementdemoedit.webm" type="video/webm">
+									  Your browser does not support the video tag.
+									  </video>
+									<p><i>Level I made to show off the full scope of movement</i></p>
+									<p>Not long after this I gutted the rigid body from the controller and used raycasts to drive the physics and collision handling. One of the biggest problems I had
+										 was the lack of a depenetration function. For the majority of the project I used a capsule raycast with the max length set to the players velocity x delta time. 
+										 I would then clamp the position of the player to the hit's distance which should prevent the player from clipping into objects, oh how wrong I was.
+									</p>	
+									<img src="images/steelseraph/Beta Level.PNG" class="image article">
+									<p><i>Early beta level screenshot</i></p>
+									<p>Once the level started gaining more than primitive collision shapes I knew I couldn't rely entirely on my collision detection function to stop
+										unwanted behaviors. This was evident by the player clipping and getting stuck on things throughout the scene every so often... I knew I needed to make this 
+										compatible with mesh colliders.
+									</p>
+									<p>At this point I introduced a depenetration function which used a larger player capsule collider to fill an array of colliders to check against.
+										I would then iterate through each collider in that array and check if the actual player's collider overlapped and if so calculate how far and  
+										what direction to move the player to resolve the collision. This method proved to fix just about every collision problem I was having up to this point.
+									</p>
+									<video autoplay muted loop class="image article">
+										<source src="videos/steelseraph/movementdemofinal.webm" type="video/webm">
+									  Your browser does not support the video tag.
+									  </video>
+									  <p><i>Movement tutorial demo</i></p>
+									  <p>In the end I've learnt so much from this project, I've learnt to effectively communicate with other team members to get tasks done, offer advice
+										and give accurate job timeline estimations as lead programmer, and gathered a deeper understanding of the game development pipeline. I'm really excited
+										to get started on my next project and put these new found skills to work! 
+									  </p>
+									  <video autoplay muted loop class="image article">
+										<source src="videos/steelseraph/gameplaydemo.webm" type="video/webm">
+									  Your browser does not support the video tag.
+									  </video>
+									  <p><i>Gameplay from final build :)</i></p>
 								</div>
 							</section>
 				</div>
